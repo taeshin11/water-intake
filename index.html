@@ -34,6 +34,24 @@
   <!-- ===== Favicon ===== -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>" />
 
+  <!-- ===== Google Analytics (replace GA_MEASUREMENT_ID) ===== -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script> -->
+
+  <!-- ===== Google AdSense (replace ca-pub-XXXXXXXX) ===== -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <!-- ===== Preload Hints ===== -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="//pagead2.googlesyndication.com" />
+
   <!-- ===== Fonts ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -93,6 +111,18 @@
 </head>
 
 <body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">💧 Hydration Calc</a>
+      <div class="nav-links">
+        <a href="/" class="active">Calculator</a>
+        <a href="/about">About</a>
+        <a href="/how-to-use">How to Use</a>
+      </div>
+    </div>
+  </nav>
 
   <!-- ===== ADSTERRA: Top Banner (728×90 desktop / 320×50 mobile) ===== -->
   <!-- ADSTERRA: Replace YOUR_AD_KEY_TOP with actual key from Adsterra dashboard -->
@@ -258,6 +288,25 @@
       </div>
     </section>
 
+    <!-- ===== LONG-TAIL SEO: Benefits Article ===== -->
+    <section class="section-gap" aria-labelledby="benefits-heading">
+      <div class="card">
+        <h2 id="benefits-heading">10 Benefits of Drinking Enough Water Every Day</h2>
+        <ol class="content-list" style="margin-top:1rem;">
+          <li><strong>Boosts Energy and Fights Fatigue:</strong> Even mild dehydration (1–2% body weight loss) significantly reduces energy levels and impairs concentration. Staying hydrated keeps your blood volume optimal, ensuring efficient oxygen and nutrient delivery to muscles and the brain.</li>
+          <li><strong>Improves Physical Performance:</strong> Athletes can lose 6–10% of their body water through sweat during intense exercise. Proper hydration maintains endurance, strength, and coordination while reducing the risk of cramps and heat-related illness.</li>
+          <li><strong>Supports Weight Management:</strong> Drinking water before meals increases satiety and can reduce calorie intake by 75–90 calories per meal. Water also boosts resting metabolic rate by 24–30% for up to 60 minutes after consumption.</li>
+          <li><strong>Promotes Healthy Skin:</strong> Adequate hydration maintains skin elasticity, supports the skin barrier function, and helps flush toxins. Chronic dehydration can lead to dry, flaky skin and accelerate the appearance of wrinkles.</li>
+          <li><strong>Supports Kidney Function:</strong> Your kidneys process approximately 120–150 liters of blood daily. Sufficient water intake helps the kidneys filter waste efficiently and reduces the risk of kidney stones by up to 50%.</li>
+          <li><strong>Aids Digestion:</strong> Water is essential for breaking down food, absorbing nutrients, and maintaining soft stool. Dehydration is one of the leading causes of chronic constipation.</li>
+          <li><strong>Regulates Body Temperature:</strong> Through sweat and respiration, water helps maintain your core temperature within the narrow range (36.1–37.2°C) needed for optimal enzyme function and metabolic processes.</li>
+          <li><strong>Reduces Headaches:</strong> Dehydration is a well-documented migraine trigger. Studies show that increasing water intake by 1.5 liters per day significantly reduces headache intensity and duration.</li>
+          <li><strong>Improves Mood and Cognition:</strong> Research published in the Journal of Nutrition found that even 1.36% dehydration in women impaired mood, increased perception of task difficulty, and reduced concentration.</li>
+          <li><strong>Supports Joint Health:</strong> Cartilage, the cushioning material in joints, is approximately 80% water. Staying hydrated keeps joints lubricated and may reduce the risk of joint pain and arthritis flare-ups.</li>
+        </ol>
+      </div>
+    </section>
+
     <!-- ===== FAQ ===== -->
     <section class="section-gap" aria-labelledby="faq-heading">
       <div class="card">
@@ -300,14 +349,31 @@
 
   </main>
 
+  <!-- ===== FEEDBACK WIDGET ===== -->
+  <div id="feedback-widget" class="feedback-widget" aria-label="Send feedback">
+    <button id="feedback-toggle" class="feedback-toggle" type="button" aria-label="Suggest an improvement">💬</button>
+    <div id="feedback-panel" class="feedback-panel hidden">
+      <p class="feedback-title">Have a suggestion?</p>
+      <p class="feedback-desc">We'd love to hear how we can improve Hydration Calc.</p>
+      <a href="mailto:taeshinkim11@gmail.com?subject=Hydration%20Calc%20—%20Feature%20Request%20%2F%20Improvement&body=Hi%20SPINAI%20team%2C%0A%0AI'd%20like%20to%20suggest%3A%0A%0A" class="btn-feedback-send">Send Feedback via Email</a>
+    </div>
+  </div>
+
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
       <div class="footer-links">
-        <a href="mailto:spinaiceo@gmail.com?subject=Hydration%20Calc%20Feedback" aria-label="Send feedback">💬 Suggest an improvement</a>
-        <a href="mailto:spinaiceo@gmail.com?subject=Business%20Inquiry%20-%20Hydration%20Calc" aria-label="Business inquiries">🤝 Business inquiries</a>
+        <a href="/">Calculator</a>
+        <a href="/about">About</a>
+        <a href="/how-to-use">How to Use & FAQ</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
       </div>
-      <p>Built by <span class="spinai-brand">SPINAI</span> &mdash; Free tools for better living</p>
+      <div class="footer-links" style="margin-top:0.5rem;">
+        <a href="mailto:taeshinkim11@gmail.com?subject=Hydration%20Calc%20Feedback">💬 Feedback</a>
+        <a href="mailto:taeshinkim11@gmail.com?subject=Business%20Inquiry%20-%20Hydration%20Calc">🤝 Business</a>
+      </div>
+      <p style="margin-top:0.75rem;">Built by <span class="spinai-brand">SPINAI</span> &mdash; Free tools for better living</p>
       <p id="visitor-counter" aria-live="polite"></p>
       <p style="margin-top:0.5rem; font-size:0.75rem;">&copy; <span id="footer-year"></span> SPINAI. All rights reserved.</p>
     </div>

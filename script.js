@@ -168,6 +168,18 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('share-whatsapp').addEventListener('click', shareWhatsApp);
   document.getElementById('share-copy').addEventListener('click', copyLink);
 
+  // Feedback widget toggle
+  const fbToggle = document.getElementById('feedback-toggle');
+  const fbPanel = document.getElementById('feedback-panel');
+  if (fbToggle && fbPanel) {
+    fbToggle.addEventListener('click', () => {
+      fbPanel.classList.toggle('hidden');
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.feedback-widget')) fbPanel.classList.add('hidden');
+    });
+  }
+
   // Init visitor counter
   initVisitorCounter();
 
