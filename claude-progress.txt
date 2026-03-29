@@ -42,4 +42,9 @@ NEXT STEPS:
        - Verify live URL with Lighthouse audit
        - Final git push (M7)
 
+DEPLOY STATUS:
+  First deploy: https://water-intake-phi.vercel.app (LIVE ✓)
+  Canonical/OG/sitemap URL fix committed (beaf7e8) — needs one more `npx vercel --prod`
+  (Blocked by Vercel 100 deployments/day free-tier limit — retry after 24h)
+
 ================================================================================
