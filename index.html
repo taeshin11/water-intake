@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO ===== -->
+  <title>Free Water Intake Calculator — How Much Water Should I Drink Daily?</title>
+  <meta name="description" content="Calculate your personalized daily water intake based on weight, activity, and climate. Track hydration with our interactive cup dashboard. Free &amp; science-based." />
+  <meta name="keywords" content="water intake calculator, how much water should I drink, daily hydration calculator, water calculator, drink water tracker, hydration tracker" />
+  <link rel="canonical" href="https://hydration-calc.vercel.app/" />
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Free Water Intake Calculator — How Much Water Should I Drink Daily?" />
+  <meta property="og:description" content="Calculate your personalized daily water intake. Interactive cup tracker included. Free &amp; science-based." />
+  <meta property="og:url" content="https://hydration-calc.vercel.app/" />
+  <meta property="og:image" content="https://hydration-calc.vercel.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Hydration Calc by SPINAI" />
+
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Water Intake Calculator — How Much Water Should I Drink Daily?" />
+  <meta name="twitter:description" content="Calculate your personalized daily water intake. Interactive cup tracker included. Free &amp; science-based." />
+  <meta name="twitter:image" content="https://hydration-calc.vercel.app/og-image.png" />
+
+  <!-- ===== PWA ===== -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#4A90D9" />
+  <link rel="apple-touch-icon" href="/favicon.ico" />
+
+  <!-- ===== Favicon ===== -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>" />
+
+  <!-- ===== Fonts ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ===== Styles ===== -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ===== JSON-LD Structured Data ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Water Intake Calculator & Daily Hydration Tracker",
+        "url": "https://hydration-calc.vercel.app/",
+        "description": "Free personalized daily water intake calculator based on weight, activity level, and climate. Includes interactive hydration cup dashboard and streak tracker.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Organization", "name": "SPINAI" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much water should I drink per day?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A common formula: drink 35 mL per kilogram of body weight daily. Activity level and climate adjust this — athletes or those in hot climates need more. Use our calculator for a personalized recommendation." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does coffee count as water intake?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Moderate coffee consumption (1–3 cups/day) does contribute to fluid intake, but water remains the best source. Caffeinated drinks can have a mild diuretic effect at high quantities." }
+          },
+          {
+            "@type": "Question",
+            "name": "How does exercise affect water needs?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Exercise increases water loss through sweat. Add 500–1000 mL per hour of intense exercise. Our calculator's activity level multiplier accounts for typical exercise levels." }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the signs of dehydration?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Common signs include dark yellow urine, dry mouth, headache, fatigue, dizziness, and reduced urine output. Severe dehydration requires medical attention." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it possible to drink too much water?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes — hyponatremia (water intoxication) can occur if you drink extreme amounts very quickly. This is rare outside of endurance sports. Listen to your body's thirst signals." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ===== ADSTERRA: Top Banner (728×90 desktop / 320×50 mobile) ===== -->
+  <!-- ADSTERRA: Replace YOUR_AD_KEY_TOP with actual key from Adsterra dashboard -->
+  <div class="ad-banner" id="ad-top" aria-label="Advertisement">
+    <script data-ad-client="YOUR_AD_KEY_TOP" async src="//www.effectiveratecpm.com/YOUR_AD_KEY_TOP/invoke.js"></script>
+    <ins data-revive-zoneid="YOUR_AD_KEY_TOP" data-revive-id="YOUR_AD_KEY_TOP"></ins>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container">
+      <h1>💧 Water Intake Calculator &amp; Daily Hydration Tracker</h1>
+      <p>Find out exactly how much water your body needs — then track every glass.</p>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:2rem; padding-bottom:2rem;">
+
+    <!-- ===== INPUT FORM ===== -->
+    <section aria-labelledby="calc-heading">
+      <div class="card">
+        <h2 id="calc-heading" style="margin-bottom:1.25rem;">🧮 Calculate Your Daily Water Intake</h2>
+
+        <!-- Unit Toggle -->
+        <div class="unit-toggle" role="group" aria-label="Weight unit">
+          <button id="unit-kg" class="active" type="button">kg</button>
+          <button id="unit-lbs" type="button">lbs</button>
+        </div>
+
+        <!-- Weight -->
+        <div class="form-group">
+          <label class="form-label" for="weight" id="weight-label">Body Weight (kg)</label>
+          <input
+            class="form-input"
+            type="number"
+            id="weight"
+            name="weight"
+            min="1"
+            max="500"
+            step="0.1"
+            placeholder="e.g. 70"
+            autocomplete="off"
+            inputmode="decimal"
+            aria-describedby="weight-error"
+          />
+          <p class="error-msg hidden" id="weight-error" role="alert"></p>
+        </div>
+
+        <!-- Activity Level -->
+        <div class="form-group">
+          <label class="form-label" for="activity">Activity Level</label>
+          <select class="form-select" id="activity" name="activity">
+            <option value="sedentary">Sedentary (little/no exercise)</option>
+            <option value="lightly_active">Lightly Active (1–3 days/week)</option>
+            <option value="moderately_active" selected>Moderately Active (3–5 days/week)</option>
+            <option value="very_active">Very Active (6–7 days/week)</option>
+            <option value="athlete">Athlete (2× training per day)</option>
+          </select>
+        </div>
+
+        <!-- Climate -->
+        <div class="form-group">
+          <label class="form-label" for="climate">Climate / Environment</label>
+          <select class="form-select" id="climate" name="climate">
+            <option value="temperate" selected>Temperate</option>
+            <option value="hot_humid">Hot &amp; Humid</option>
+            <option value="cold">Cold</option>
+            <option value="high_altitude">High Altitude</option>
+          </select>
+        </div>
+
+        <button class="btn-primary" id="calc-btn" type="button">
+          Calculate My Water Intake 💧
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== RESULT CARD ===== -->
+    <section class="section-gap hidden" id="result-card" aria-live="polite" aria-labelledby="result-heading">
+      <div class="card">
+        <h2 id="result-heading">📊 Your Daily Water Goal</h2>
+        <div class="result-highlight">
+          <div class="result-big">
+            <span class="num" id="result-ml">0</span>
+            <span class="lbl">millilitres per day</span>
+          </div>
+          <div class="result-big">
+            <span class="num" id="result-cups">0</span>
+            <span class="lbl">cups per day (250 mL each)</span>
+          </div>
+        </div>
+        <p style="color:var(--text-secondary); font-size:0.9rem;">
+          Based on your weight, activity level, and climate. Spread intake throughout the day for best results.
+        </p>
+
+        <!-- Share Buttons -->
+        <div>
+          <p style="font-weight:600; margin-top:1rem; margin-bottom:0.5rem;">Share your goal:</p>
+          <div class="share-row">
+            <button class="btn-share btn-twitter" id="share-twitter" type="button">🐦 Twitter</button>
+            <button class="btn-share btn-whatsapp" id="share-whatsapp" type="button">💬 WhatsApp</button>
+            <button class="btn-share btn-copy" id="share-copy" type="button">🔗 Copy Link</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ADSTERRA: Native Ad (between result and cup dashboard) ===== -->
+    <!-- ADSTERRA: Replace YOUR_AD_KEY_NATIVE with actual key from Adsterra dashboard -->
+    <div class="ad-native section-gap" id="ad-native" aria-label="Advertisement">
+      <script data-ad-client="YOUR_AD_KEY_NATIVE" async src="//www.effectiveratecpm.com/YOUR_AD_KEY_NATIVE/invoke.js"></script>
+    </div>
+
+    <!-- ===== CUP DASHBOARD ===== -->
+    <section class="section-gap hidden" id="dashboard-section" aria-labelledby="dashboard-heading">
+      <div class="card">
+        <h2 id="dashboard-heading">🥤 Track Your Hydration Today</h2>
+        <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:0.25rem;">
+          Tap each cup as you drink it. Fill them all to reach your goal!
+        </p>
+
+        <!-- Cup Grid -->
+        <div id="cup-grid" role="list" aria-label="Hydration cups"></div>
+
+        <!-- Counter + Reset -->
+        <div class="cup-counter-row">
+          <span id="cup-counter">0 / 0 cups</span>
+          <button class="btn-reset" id="reset-cups" type="button">↺ Reset</button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-wrap" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div id="progress-fill"></div>
+        </div>
+        <div class="progress-labels">
+          <span>0%</span>
+          <span id="progress-pct">0%</span>
+          <span>100%</span>
+        </div>
+        <p id="motivation-msg" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ===== STREAK TRACKER ===== -->
+    <section class="section-gap hidden" id="streak-section" aria-labelledby="streak-heading">
+      <div class="card">
+        <h2 id="streak-heading">📅 Your Hydration Streak</h2>
+        <div id="streak-days" role="list" aria-label="7-day hydration history"></div>
+        <p id="streak-count"></p>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATIONAL CONTENT ===== -->
+    <section class="section-gap" aria-labelledby="science-heading">
+      <div class="card">
+        <h2 id="science-heading">🔬 The Science of Hydration</h2>
+        <p style="color:var(--text-secondary); font-size:0.95rem; margin-top:0.75rem;">
+          Water makes up about 60% of the adult human body and is involved in virtually every physiological process — from regulating body temperature and transporting nutrients to flushing out toxins and lubricating joints. Even mild dehydration of 1–2% of body weight can impair cognitive performance, reduce physical endurance, and cause headaches or fatigue.
+        </p>
+        <p style="color:var(--text-secondary); font-size:0.95rem; margin-top:0.75rem;">
+          The widely cited "8 glasses a day" rule is a useful starting point, but optimal intake varies significantly with body weight, activity level, climate, and diet. Our calculator uses an evidence-based formula (35 mL per kg of body weight as a baseline, adjusted for activity and environment) to give you a personalized recommendation. Remember: fruits, vegetables, and other beverages also contribute to your daily fluid intake — listen to your body and drink when you're thirsty.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section-gap" aria-labelledby="faq-heading">
+      <div class="card">
+        <h2 id="faq-heading">❓ Frequently Asked Questions</h2>
+        <div style="margin-top:1rem;">
+
+          <article class="faq-item">
+            <h3>How much water should I drink per day?</h3>
+            <p>A reliable formula is 35 mL per kg of body weight, adjusted for activity and climate. Our calculator does this automatically. The old "8 glasses a day" guideline is a good baseline but doesn't account for individual differences.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Does coffee count toward my daily water intake?</h3>
+            <p>Moderate coffee consumption (1–3 cups/day) does contribute to your fluid intake. However, caffeine has a mild diuretic effect at higher amounts. Pure water remains the gold standard for hydration.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>How does exercise affect how much water I need?</h3>
+            <p>Exercise significantly increases fluid loss through sweat and respiration. For every hour of intense activity, you may need an additional 500–1000 mL. Our "Very Active" and "Athlete" settings account for this with a 1.4× and 1.5× multiplier respectively.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>What are the signs of dehydration?</h3>
+            <p>Early signs include dark yellow urine, dry mouth, thirst, and fatigue. Moderate dehydration adds headache, dizziness, and reduced cognitive performance. Severe dehydration (rapid heartbeat, confusion, no urination) requires medical attention immediately.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Is it possible to drink too much water?</h3>
+            <p>Yes — hyponatremia (water intoxication) can occur when excessive water dilutes sodium levels in the blood. This is rare in everyday life but can occur during endurance events if you drink far beyond your thirst. Follow your body's signals.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Why does climate affect water needs?</h3>
+            <p>Hot and humid environments increase sweat rate, while high altitude increases respiratory water loss. Cold climates also raise fluid needs due to dry air and elevated metabolic rate. Our calculator adds 250–500 mL for these conditions.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="mailto:spinaiceo@gmail.com?subject=Hydration%20Calc%20Feedback" aria-label="Send feedback">💬 Suggest an improvement</a>
+        <a href="mailto:spinaiceo@gmail.com?subject=Business%20Inquiry%20-%20Hydration%20Calc" aria-label="Business inquiries">🤝 Business inquiries</a>
+      </div>
+      <p>Built by <span class="spinai-brand">SPINAI</span> &mdash; Free tools for better living</p>
+      <p id="visitor-counter" aria-live="polite"></p>
+      <p style="margin-top:0.5rem; font-size:0.75rem;">&copy; <span id="footer-year"></span> SPINAI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== ADSTERRA: Sticky Bottom Banner (mobile, 320×50) ===== -->
+  <!-- ADSTERRA: Replace YOUR_AD_KEY_STICKY with actual key from Adsterra dashboard -->
+  <div class="ad-sticky-mobile" id="ad-sticky" aria-label="Advertisement">
+    <script data-ad-client="YOUR_AD_KEY_STICKY" async src="//www.effectiveratecpm.com/YOUR_AD_KEY_STICKY/invoke.js"></script>
+  </div>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>

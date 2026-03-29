@@ -1,0 +1,15 @@
+[
+  { "id": "F01", "title": "Project scaffold + Vercel deploy pipeline", "status": "done", "priority": 1, "milestone": true },
+  { "id": "F02", "title": "Responsive layout + soft background palette + SPINAI footer", "status": "done", "priority": 1, "milestone": false },
+  { "id": "F03", "title": "Weight & activity input form (metric + imperial toggle)", "status": "done", "priority": 1, "milestone": false },
+  { "id": "F04", "title": "Water intake calculation engine", "status": "done", "priority": 1, "milestone": true },
+  { "id": "F05", "title": "Visual cup-grid dashboard (tap to fill)", "status": "done", "priority": 1, "milestone": true },
+  { "id": "F06", "title": "Animated progress bar + motivational messages", "status": "done", "priority": 2, "milestone": false },
+  { "id": "F07", "title": "Google Sheets webhook integration (silent POST on calc)", "status": "done", "priority": 1, "milestone": true },
+  { "id": "F08", "title": "Adsterra ad integration (banner + native)", "status": "done", "priority": 1, "milestone": true },
+  { "id": "F09", "title": "SEO optimization (meta, OG, sitemap, robots, structured data)", "status": "done", "priority": 1, "milestone": true },
+  { "id": "F10", "title": "Visitor counter (today + total) in footer", "status": "done", "priority": 2, "milestone": false },
+  { "id": "F11", "title": "localStorage daily log + streak tracker", "status": "done", "priority": 2, "milestone": false },
+  { "id": "F12", "title": "Feedback & Business inquiry mailto links", "status": "done", "priority": 2, "milestone": false },
+  { "id": "F13", "title": "Final QA: live site check, all functions, performance audit", "status": "pending", "priority": 1, "milestone": true }
+]

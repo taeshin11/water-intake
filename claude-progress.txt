@@ -1,0 +1,45 @@
+================================================================================
+SESSION LOG — Water Intake Calculator & Log (Hydration Calc)
+================================================================================
+
+[2026-03-30] SESSION 1 — Full Build (F01–F12)
+--------------------------------------------------------------------------------
+Status: COMPLETED
+Features implemented: F01, F02, F03, F04, F05, F06, F07, F08, F09, F10, F11, F12
+
+WHAT WAS DONE:
+  F01 — Scaffold: index.html, style.css, script.js, vercel.json, .gitignore,
+         README.md, manifest.json, feature_list.json, claude-progress.txt, init.sh
+  F02 — Responsive layout (320px–1440px), soft blue/mint gradient background,
+         card design with shadow, Inter font, SPINAI footer with copyright
+  F03 — Input form: weight (kg/lbs toggle), activity dropdown, climate dropdown,
+         real-time validation, smooth scroll to results on calculate
+  F04 — Calculation engine: weight_kg × 35 mL base, activity multiplier (1.0–1.5),
+         climate modifier (+0/+250/+500 mL). Outputs totalMl + cups (250mL each)
+  F05 — Cup-grid dashboard: SVG water-drop cups, tap to fill animation,
+         fill+check opacity transitions, ripple animation, counter display,
+         reset button
+  F06 — Animated progress bar (light→deep blue gradient, 0.5s cubic-bezier),
+         motivational messages at 0/25/50/75/100%
+  F07 — Google Sheets webhook: fire-and-forget via sendBeacon/fetch,
+         GOOGLE_SHEETS_WEBHOOK_URL placeholder at top of script.js
+  F08 — Adsterra ad placements: top banner, native mid-page, sticky mobile footer.
+         Placeholder keys marked with comments in index.html
+  F09 — Full SEO: title, meta description, canonical, OG tags, Twitter card,
+         JSON-LD (WebApplication + FAQPage schemas), FAQ section (6 Q&As),
+         educational hydration content, sitemap.xml, robots.txt, PWA manifest
+  F10 — Visitor counter via CountAPI (today + total) in footer
+  F11 — localStorage daily log: saves cups_goal + cups_done per date key.
+         7-day streak heatmap with ✅/○ icons and streak count display
+  F12 — Footer mailto links: feedback + business inquiry → spinaiceo@gmail.com
+
+BLOCKERS: None
+
+NEXT STEPS:
+  F13 — Deploy to Vercel, run live QA checklist (all 17 checks from PRD §4.13)
+       - Replace GOOGLE_SHEETS_WEBHOOK_URL with real Apps Script URL
+       - Replace Adsterra ad keys (YOUR_AD_KEY_TOP, _NATIVE, _STICKY)
+       - Verify live URL with Lighthouse audit
+       - Final git push (M7)
+
+================================================================================
