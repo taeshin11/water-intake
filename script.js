@@ -1,7 +1,7 @@
 // ============================================================
 // CONFIGURATION — replace placeholders before going live
 // ============================================================
-const GOOGLE_SHEETS_WEBHOOK_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEBHOOK_URL_HERE';
+const GOOGLE_SHEETS_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycby1OoQ9NYtWbrFcCUM-Rq6vLmP1gXrHB5eFpEmvzdpU4knP4hLaMScSkwf0F-2Lqay3/exec';
 const COUNTAPI_NAMESPACE = 'hydration-calc-spinai';
 const COUNTAPI_KEY = 'visitors';
 
