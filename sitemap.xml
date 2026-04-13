@@ -1,33 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
     <loc>https://water-intake-phi.vercel.app/</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://water-intake-phi.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://water-intake-phi.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://water-intake-phi.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://water-intake-phi.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://water-intake-phi.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://water-intake-phi.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://water-intake-phi.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://water-intake-phi.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://water-intake-phi.vercel.app/"/>
   </url>
+
   <url>
     <loc>https://water-intake-phi.vercel.app/about</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-04-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://water-intake-phi.vercel.app/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://water-intake-phi.vercel.app/about"/>
   </url>
+
   <url>
     <loc>https://water-intake-phi.vercel.app/how-to-use</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-04-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://water-intake-phi.vercel.app/how-to-use"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://water-intake-phi.vercel.app/how-to-use"/>
   </url>
+
   <url>
     <loc>https://water-intake-phi.vercel.app/privacy</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-04-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://water-intake-phi.vercel.app/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://water-intake-phi.vercel.app/privacy"/>
   </url>
+
   <url>
     <loc>https://water-intake-phi.vercel.app/terms</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-04-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://water-intake-phi.vercel.app/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://water-intake-phi.vercel.app/terms"/>
   </url>
+
 </urlset>

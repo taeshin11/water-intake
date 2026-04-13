@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="WddgcbVJsL2BGHNAje5m6DK56IcR0Mw5UOqozI2Xtrc" />
 
   <!-- ===== SEO ===== -->
   <title>Free Water Intake Calculator — How Much Water Should I Drink Daily?</title>
@@ -31,6 +32,17 @@
   <meta name="theme-color" content="#4A90D9" />
   <link rel="apple-touch-icon" href="/favicon.ico" />
 
+  <!-- ===== hreflang ===== -->
+  <link rel="alternate" hreflang="en" href="https://water-intake-phi.vercel.app/" />
+  <link rel="alternate" hreflang="ko" href="https://water-intake-phi.vercel.app/" />
+  <link rel="alternate" hreflang="ja" href="https://water-intake-phi.vercel.app/" />
+  <link rel="alternate" hreflang="zh" href="https://water-intake-phi.vercel.app/" />
+  <link rel="alternate" hreflang="es" href="https://water-intake-phi.vercel.app/" />
+  <link rel="alternate" hreflang="fr" href="https://water-intake-phi.vercel.app/" />
+  <link rel="alternate" hreflang="de" href="https://water-intake-phi.vercel.app/" />
+  <link rel="alternate" hreflang="pt" href="https://water-intake-phi.vercel.app/" />
+  <link rel="alternate" hreflang="x-default" href="https://water-intake-phi.vercel.app/" />
+
   <!-- ===== Favicon ===== -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>" />
 
@@ -43,8 +55,8 @@
     gtag('config', 'GA_MEASUREMENT_ID');
   </script> -->
 
-  <!-- ===== Google AdSense (replace ca-pub-XXXXXXXX) ===== -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script> -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7098271335538021" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7098271335538021" crossorigin="anonymous"></script>
 
   <!-- ===== Preload Hints ===== -->
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -362,7 +374,7 @@
     <div id="feedback-panel" class="feedback-panel hidden">
       <p class="feedback-title">Have a suggestion?</p>
       <p class="feedback-desc">We'd love to hear how we can improve Hydration Calc.</p>
-      <a href="mailto:taeshinkim11@gmail.com?subject=Hydration%20Calc%20—%20Feature%20Request%20%2F%20Improvement&body=Hi%20SPINAI%20team%2C%0A%0AI'd%20like%20to%20suggest%3A%0A%0A" class="btn-feedback-send">Send Feedback via Email</a>
+      <a id="water-feedback-mailto" href="mailto:taeshinkim11@gmail.com?subject=Hydration%20Calc%20—%20Feature%20Request%20%2F%20Improvement&body=Hi%20SPINAI%20team%2C%0A%0AI'd%20like%20to%20suggest%3A%0A%0A" class="btn-feedback-send"><span id="water-feedback-btn">Send Feedback via Email</span></a>
     </div>
   </div>
 
@@ -405,6 +417,7 @@
     document.getElementById('footer-year').textContent = new Date().getFullYear();
   </script>
   <script src="script.js"></script>
+  <script src="i18n.js" defer></script>
 
 </body>
 </html>

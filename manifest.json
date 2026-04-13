@@ -1,18 +1,35 @@
 {
-  "name": "Water Intake Calculator & Hydration Tracker",
+  "name": "Water Intake Calculator & Daily Hydration Tracker",
   "short_name": "Hydration Calc",
-  "description": "Calculate your daily water intake and track every glass with an interactive cup dashboard.",
+  "description": "Calculate your daily water intake and track every glass with an interactive cup dashboard. Free, science-based, and personalized.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F0F4FF",
   "theme_color": "#4A90D9",
   "orientation": "portrait-primary",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["health", "fitness", "utilities"],
   "icons": [
     {
       "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Calculate Water Intake",
+      "short_name": "Calculate",
+      "description": "Calculate your personalized daily water intake",
+      "url": "/#calc-heading"
+    },
+    {
+      "name": "Track Hydration",
+      "short_name": "Track",
+      "description": "Track your daily water consumption",
+      "url": "/#dashboard-section"
     }
   ]
 }
